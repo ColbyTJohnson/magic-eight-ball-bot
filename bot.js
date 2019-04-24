@@ -23,14 +23,39 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     if (message.substring(0, 1) == '!') {
         var args = message.substring(1).split(' ');
         var cmd = args[0];
+        var responses = [
+            'It is certain.',
+            'It is decidedly so.',
+            'Without a doubt.',
+            'Yes - definitely.',
+            'You may rely on it.',
+            'As I see it, yes.',
+            'Most likely.',
+            'Outlook good.',
+            'Yes.',
+            'Signs point to yes.',
+            'Reply hazy, try again.',
+            'Ask again later.',
+            'Better not tell you now.',
+            'Cannot predict now.',
+            'Concentrate and ask again.',
+            'Don\'t count on it.',
+            'My reply is no.',
+            'My sources say no.',
+            'Outlook not so good.',
+            'Very doubtful.'
+        ];
+
+        var randomNumber = Math.floor(Math.random()*responses.length);
+        var response = responses[randomNumber];
 
         args = args.splice(1);
         switch(cmd) {
             // !ping
-            case 'ping':
+            case '8ball':
                 bot.sendMessage({
                     to: channelID,
-                    message: 'Pong!'
+                    message: response
                 });
                 break;
             // Just add any case commands if you want to..
