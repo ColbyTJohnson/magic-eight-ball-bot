@@ -1,0 +1,11 @@
+{
+  "name": "magic-eight-ball-bot",
+  "version": "1.0.0",
+  "description": "8-ball responses",
+  "main": "bot.js",
+  "author": "Colby Johnson",
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "winston": "2.4.4"
+  }
+}
